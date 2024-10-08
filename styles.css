@@ -1,0 +1,123 @@
+:root {
+--text: #f5f9eb;
+--background: #090c04;
+--primary: #86b536;
+--secondary: #216e47;
+--accent: #2e9e91;
+--linearPrimarySecondary: linear-gradient(#86b536, #216e47);
+--linearPrimaryAccent: linear-gradient(#86b536, #2e9e91);
+--linearSecondaryAccent: linear-gradient(#216e47, #2e9e91);
+--radialPrimarySecondary: radial-gradient(#86b536, #216e47);
+--radialPrimaryAccent: radial-gradient(#86b536, #2e9e91);
+--radialSecondaryAccent: radial-gradient(#216e47, #2e9e91);
+
+}
+
+
+@font-face {
+    font-family: Geist;
+    src: url(./fonts/Geist-Medium.woff2);
+}
+
+* {
+    font-family: Geist;
+    margin: 0 auto;
+   
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+
+.tasksheader {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputdiv {
+    text-align: center;
+}
+
+.inputdiv > button {
+    background-color: var(--secondary);
+    outline: 0;
+    border: 0;
+    padding: 3px 10px;
+    color: var(--text);
+    
+}
+
+.inputdiv > input {
+    background-color: #1f270c;
+    outline: 0;
+    border: 0;
+    padding: 6px 10px;
+    color: var(--text);
+}
+
+ul, li {
+    margin-top: 10px;
+}
+
+li {
+    animation: newtask 1s ;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+ul {
+    background-color: #1c260d31;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+ul li::marker {
+    color: var(--accent);
+}
+
+@keyframes newtask {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #113b36;
+    transition: all 0.5s;
+}
+
+.deletebtn {
+    float: right;
+    margin-right: 20px;
+    background-color: var(--primary);
+    border: 0;
+    outline: 0;
+    color: var(--background);
+}
+
+.tasksdone {
+    position: absolute;
+    bottom: 100px;
+}
+
+
+
